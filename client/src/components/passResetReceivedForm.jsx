@@ -30,7 +30,7 @@ class PasswordResetReceivedForm extends Form {
     const { userId, token } = this.props;
     const { password, confirmPassword } = this.state.data;
 
-    if (password != confirmPassword) {
+    if (password !== confirmPassword) {
       const errors = { ...this.state.errors };
       errors.password = "passwords do not match";
       this.setState({ errors });
